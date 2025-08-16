@@ -1,7 +1,7 @@
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 
-const Particles = ({ count = 200 }) => {
+const Particles = ({ count = 100 }) => {
   const mesh = useRef();
 
   const particles = useMemo(() => {
@@ -9,33 +9,38 @@ const Particles = ({ count = 200 }) => {
     for (let i = 0; i < count; i++) {
       temp.push({
         position: [
-          (Math.random() - 0.5) * 10,
-          Math.random() * 10 + 5, // higher starting point
-          (Math.random() - 0.5) * 10,
+          (Math.random() - 0.5) * 8, 
+          Math.random() * 6 + 3,      
+          (Math.random() - 0.5) * 8,
         ],
-        speed: 0.005 + Math.random() * 0.001,
+        speed: 0.004 + Math.random() * 0.002, 
       });
     }
     return temp;
   }, [count]);
 
+  // Animate particles
   useFrame(() => {
     const positions = mesh.current.geometry.attributes.position.array;
     for (let i = 0; i < count; i++) {
       let y = positions[i * 3 + 1];
       y -= particles[i].speed;
-      if (y < -2) y = Math.random() * 10 + 5;
+      if (y < -1) y = Math.random() * 6 + 3; 
       positions[i * 3 + 1] = y;
     }
     mesh.current.geometry.attributes.position.needsUpdate = true;
   });
 
-  const positions = new Float32Array(count * 3);
-  particles.forEach((p, i) => {
-    positions[i * 3] = p.position[0];
-    positions[i * 3 + 1] = p.position[1];
-    positions[i * 3 + 2] = p.position[2];
-  });
+  // Initialize positions
+  const positions = useMemo(() => {
+    const arr = new Float32Array(count * 3);
+    particles.forEach((p, i) => {
+      arr[i * 3] = p.position[0];
+      arr[i * 3 + 1] = p.position[1];
+      arr[i * 3 + 2] = p.position[2];
+    });
+    return arr;
+  }, [particles, count]);
 
   return (
     <points ref={mesh}>
@@ -49,9 +54,9 @@ const Particles = ({ count = 200 }) => {
       </bufferGeometry>
       <pointsMaterial
         color="#ffffff"
-        size={0.05}
+        size={0.04} x
         transparent
-        opacity={0.9}
+        opacity={0.7} 
         depthWrite={false}
       />
     </points>
