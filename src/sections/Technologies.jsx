@@ -315,7 +315,7 @@ const categories = {
   ],
 
   "System Programming":[
-     { icon: <PiFileCppFill className="text-6xl md:text-7xl text-yellow-600" /> },
+    //  { icon: <PiFileCppFill className="text-6xl md:text-7xl text-yellow-600" /> },
     { icon: <FaRust className="text-6xl md:text-7xl text-orange-500" /> },
     { icon: <FaGolang className="text-6xl md:text-7xl text-blue-600" /> },
   ]
