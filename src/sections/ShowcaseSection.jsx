@@ -255,18 +255,15 @@ const AppShowcase = () => {
               <img src="/images/project1.png" alt="Ryde App Interface" />
             </div>
             <div className="text-content">
-              <h2>TaskMaster Pro – Full-Stack TypeScript Task Manager</h2>
+              <h2>NoteForge – Full-Stack Notes App</h2>
               <p className="text-white-50 md:text-xl">
-                Built a scalable full-stack task management app with TypeScript,
-                React, Tailwind CSS, and +5 advanced tools.  
-                Features include task creation, updates, priorities, due dates,
-                and real-time synchronization.
+                NoteForge is a modern full-stack application built with Next.js 15, Tailwind, Shadcn UI, and Drizzle ORM. It features secure authentication with Better Auth, rich-text editing powered by Tiptap, and a clean, responsive UI with Radix components. Users can sign up, log in, and manage their notes seamlessly with a fast, serverless PostgreSQL backend on Neon.
               </p>
 
               {/* 🔗 Project Links */}
               <div className="flex gap-4 mt-4">
                 <a
-                  href="https://ts-fullstack-kappa.vercel.app/"
+                  href="https://note-forge-two.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-[#FF6B6B] text-white font-medium shadow hover:bg-[#ff5252] transition"
@@ -274,7 +271,7 @@ const AppShowcase = () => {
                   Live Demo
                 </a>
                 <a
-                  href="https://github.com/MuzzaiyyanHussain/ts-fullstack"
+                  href="https://github.com/MuzzaiyyanHussain/note-forge"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-[#4A90E2] text-white font-medium shadow hover:bg-[#357ABD] transition"
@@ -285,9 +282,7 @@ const AppShowcase = () => {
             </div>
           </div>
 
-          {/* === Other Projects === */}
           <div className="project-list-wrapper overflow-hidden">
-            {/* === Library Project with Links === */}
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img
@@ -297,8 +292,7 @@ const AppShowcase = () => {
               </div>
               <h2>3D Portfolio</h2>
 
-              {/* 🔗 Project Links */}
-              <div className="flex gap-4 mt-4">
+              <div className="flex gap-4 mt-3">
                 <a
                   href="muzzaiyyan.xyz"
                   target="_blank"
@@ -321,9 +315,28 @@ const AppShowcase = () => {
             {/* === YC Directory Project (No Links) === */}
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+                <img src="/images/project4.png" alt="YC Directory App" />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>Taskmaster Pro:- Full stack task app</h2>
+               <p className="text-white-50 md:text-xl">
+                Full stack task app in TypeScript and integrated mongoDB database
+              </p>
+              <a
+                  href="https://ts-fullstack-kappa.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-[#34D399] text-white font-medium shadow hover:bg-[#10B981] transition"
+                >
+                  Live Demo
+                </a>
+                <a
+                  href="https://github.com/MuzzaiyyanHussain/ts-fullstack"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-[#4A90E2] text-white font-medium shadow hover:bg-[#357ABD] transition"
+                >
+                  GitHub
+                </a>
             </div>
           </div>
         </div>
