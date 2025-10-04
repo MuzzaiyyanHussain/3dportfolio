@@ -290,11 +290,11 @@ const AppShowcase = () => {
                   alt="Library Management Platform"
                 />
               </div>
-              <h2>3D Portfolio</h2>
+              <h2>Pixora - AI PHOTO EDITOR SAAS</h2>
 
               <div className="flex gap-4 mt-3">
                 <a
-                  href="muzzaiyyan.xyz"
+                  href="https://ai-saas-5gr4.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-[#34D399] text-white font-medium shadow hover:bg-[#10B981] transition"
@@ -302,7 +302,7 @@ const AppShowcase = () => {
                   Live Demo
                 </a>
                 <a
-                  href="https://github.com/yourusername/library-platform"
+                  href="https://github.com/MuzzaiyyanHussain/ai-saas"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-[#4A90E2] text-white font-medium shadow hover:bg-[#357ABD] transition"
